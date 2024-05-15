@@ -81,12 +81,15 @@ use Illuminate\Support\Facades\DB;
                             </td>
                             <td class=" text-right">
                                 <a style="font-size: 1.5rem; margin-right: 8px; color: black;"
-                                    href="{{ URL::to('/admin/edit_product/' . $product->product_id) }}"><i
+                                    href="{{ route ('products.show', [$product->product_id]) }}"><i
                                         class=" nc-icon nc-tag-content"></i></a>
-                                <a onclick="return confirm('Bạn có chắc muốn xóa không?');"
-                                    style="font-size: 1.5rem; color: black;"
-                                    href="{{ URL::to('/admin/list_product/' . $product->product_id) }}"><i
-                                        class="nc-icon nc-basket"></i></a>
+                                        <form id="delete-form-{{ $product->product_id }}" action="{{ route('products.destroy', ['product' => $product->product_id]) }}" method="POST" style="display: none;">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                                <a onclick="event.preventDefault(); if (confirm('Bạn có chắc muốn xóa không?')) document.getElementById('delete-form-{{ $product->product_id }}').submit();" 
+                                style="font-size: 1.5rem; color: black;"
+                                href="#"><i class="nc-icon nc-basket"></i></a>
                             </td>
                         </tr>
                         @endforeach

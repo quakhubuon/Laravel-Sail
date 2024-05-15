@@ -19,7 +19,7 @@
             <h5 class="card-title">Thêm sản phẩm</h5>
         </div>
         <div class="card-body">
-            <form action="{{ URL::to('admin/product') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route ('products.store') }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="row">
                     <div class="col-md-12">

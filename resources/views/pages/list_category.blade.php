@@ -56,12 +56,15 @@ use Illuminate\Support\Facades\Session;
                             </td>
                             <td class="text-right">
                                 <a style="font-size: 1.5rem; margin-right: 8px; color: black;"
-                                    href="{{ URL::to('/admin/edit_category/' . $category->category_id) }}"><i
+                                    href="{{ route ('categories.show', [$category->category_id]) }}"><i
                                         class=" nc-icon nc-tag-content"></i></a>
-                                <a onclick="return confirm('Bạn có chắc muốn xóa không?');"
-                                    style="font-size: 1.5rem; color: black;"
-                                    href="{{ URL::to('/admin/list_category/' . $category->category_id) }}"><i
-                                        class="nc-icon nc-basket"></i></a>
+                                        <form id="delete-form-{{ $category->category_id }}" action="{{ route('categories.destroy', ['category' => $category->category_id]) }}" method="POST" style="display: none;">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                                <a onclick="event.preventDefault(); if (confirm('Bạn có chắc muốn xóa không?')) document.getElementById('delete-form-{{ $category->category_id }}').submit();" 
+                                style="font-size: 1.5rem; color: black;"
+                                href="#"><i class="nc-icon nc-basket"></i></a>
                             </td>
                         </tr>
                         @endforeach

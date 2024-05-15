@@ -65,7 +65,7 @@ Coded by www.creative-tim.com
                         </a>
                     </li>
                     <li class="active ">
-                        <a href="{{ URL::to ('admin/add_category') }}">
+                        <a href="{{ route ('categories.index') }}">
                             <i class="nc-icon nc-app"></i>
                             <p>Thêm danh mục</p>
                         </a>
@@ -92,42 +92,6 @@ Coded by www.creative-tim.com
                         <a href="{{ URL::to ('admin/list_checkout') }}">
                             <i class="nc-icon nc-delivery-fast"></i>
                             <p>Danh sách đơn hàng</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="{{ URL::to ('admin/index_permission') }}">
-                            <i class="nc-icon nc-laptop"></i>
-                            <p>Thêm quyền</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="{{ URL::to ('admin/list_permission') }}">
-                            <i class="nc-icon nc-spaceship"></i>
-                            <p>Danh sách quyền</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="{{ URL::to ('admin/index_role') }}">
-                            <i class="nc-icon nc-album-2"></i>
-                            <p>Thêm vai trò</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="{{ URL::to ('admin/list_role') }}">
-                            <i class="nc-icon nc-badge"></i>
-                            <p>Danh sách vai trò</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="{{ URL::to ('admin/add_user') }}">
-                            <i class="nc-icon nc-user-run"></i>
-                            <p>Thêm người dùng</p>
-                        </a>
-                    </li>
-                    <li class="active ">
-                        <a href="{{ URL::to ('admin/list_user') }}">
-                            <i class="nc-icon nc-single-02"></i>
-                            <p>Quản lí người dùng</p>
                         </a>
                     </li>
                 </ul>

@@ -48,7 +48,7 @@
                 <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
                     <input class="test" style="position: absolute; left:0;" data-value="tren-15-trieu" data-id="0"
                         type="checkbox" id="price-5">
-                    <label style="margin-top: 8px" for="price-5">Trên 15 million VNĐ</label>
+                    <label style="margin-top: 8px" for="price-5">Over 15 million VNĐ</label>
                 </div>
             </div>
             <!-- Price End -->

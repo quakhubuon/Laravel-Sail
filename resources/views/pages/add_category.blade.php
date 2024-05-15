@@ -7,7 +7,7 @@
             <h5 class="card-title">Thêm danh mục sản phẩm</h5>
         </div>
         <div class="card-body">
-            <form action="{{ URL::to('admin/category') }}" method="get">
+            <form action="{{ route ('categories.store') }}" method="post">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="form-group">
